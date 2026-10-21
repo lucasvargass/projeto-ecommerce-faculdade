@@ -19,10 +19,23 @@ btn.addEventListener("click", function () {
 const form = document.querySelector("#contato-form");
 const email = document.querySelector("#email");
 const erro = document.querySelector("#erro");
+const telefone = document.querySelector("#telefone");
+const nomecompleto = document.querySelector("#nomecompleto");
 
 form.addEventListener("submit", function (evento) {
     if (email.value === "") {
         evento.preventDefault();
         erro.textContent = "Digite seu e-mail.";
     }
+
+    if (nomecompleto.value === "") {
+        evento.preventDefault();
+        erro.textContent = "Digite seu nome.";
+    }
+
+    if (telefone.value === "") {
+        evento.preventDefault();
+        erro.textContent = "Digite seu Telefone.";
+    }
+
 });
